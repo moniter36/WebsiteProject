@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Riegler - Computer Engineer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3d5a80;
+            overflow-x: hidden; 
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2em 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+            animation: fadeIn 2s ease-out 0.5s;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-out;
+            position: relative;
+            transition: left 1s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6em;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        /* Trailing cursor styles */
+        #trailing-cursor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #333;
+            border-radius: 50%;
+            pointer-events: none;
+            transform-origin: center;
+            transition: transform 0.2s ease-out;
+        }
+
+     
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+      
+        .page-transition {
+            opacity: 1;
+            left: 0;
+        }
+
+        .page-transition-exit {
+            opacity: 0;
+            left: -100%;
+        }
+
+        .work-details {
+            font-weight: normal;
+        }
+
+        /* Task list */
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .task-list li::before {
+            content: '\2022'; 
+            color: #555;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Jake Riegler</h1>
+        <p>Computer Engineer | Ohio State</p>
+    </header>
+
+     <a href="" class="page-transition">
+        <section class="page-transition">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am Jake Riegler, a passionate computer engineer currently pursuing my studies at Ohio State University. This website was designed entirely by me to showcase my HTML and CSS skills, as I am currently learning full stack development. </p>
+        </section>
+    </a>
+
+    <section class="page-transition">
+        <h2>Skills</h2>
+        <ul>
+            <li><a href="#" class="page-transition">Programming Languages: C++, Java, Python</a></li>
+            <li><a href="#" class="page-transition">Web Development: HTML, CSS, JavaScript</a></li>
+            <li><a href="#" class="page-transition">Operating Systems: Windows, Linux</a></li>
+            <li><a href="#" class="page-transition">Database Management: MySQL, MongoDB</a></li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+    <section class="page-transition">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>
+                <h3><a href="" class="page-transition">WSM Technology Inc.</a></h3>
+                <p class="work-details">
+                    Location: Rootstown, OH, USA<br>
+                    Duration: Jun 2020 - Aug 2022<br><br>
+
+                    - Responsible for keeping a clean and safe shop floor by maintaining mold machine conditions<br>
+                    - Helped design molds using Solidworks<br>
+                    - Helped assemble molds while operating the machine
+                </p>
+            </li>
+            <li>
+                <h3><a href="" class="page-transition">Trionetics Inc.</a></h3>
+                <p class="work-details">
+                    Location: Brooklyn Heights, OH, USA<br>
+                    Duration: Jun 2023 - Aug 2023<br><br>
+
+                    - Assisted in electrical tests and QC on custom water treatment systems using PLC controls<br>
+                    - Helped wire and configure four different water treatment systems for Intel and one for TE Connectivity<br>
+                    - Wired and assembled a system for an in-house display for Estee Lauder
+                </p>
+            </li>
+            
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Jake Riegler. All Rights Reserved.</p>
+    </footer>
+
+    <div id="trailing-cursor"></div>
+
+    <script>
+        // Trailing cursor functionality
+        document.addEventListener('mousemove', (e) => {
+            const trailingCursor = document.getElementById('trailing-cursor');
+            trailingCursor.style.left = e.pageX + 'px';
+            trailingCursor.style.top = e.pageY + 'px';
+        });
+
+        // Page transition functionality
+        document.addEventListener('click', (e) => {
+            const target = e.target;
+            if (target.tagName === 'A' && target.classList.contains('page-transition')) {
+                e.preventDefault();
+                const sections = document.querySelectorAll('.page-transition');
+                sections.forEach(section => {
+                    section.classList.remove('page-transition');
+                    section.classList.add('page-transition-exit');
+                });
+
+                setTimeout(() => {
+                    const href = target.getAttribute('href');
+                    window.location.href = href;
+                }, 1000); // Adjust the delay based on your transition duration
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
